@@ -1,0 +1,296 @@
+core acl 2.4.0-1 [installed]
+core amd-ucode 20260622-1
+core archlinux-keyring 20260727-1 [installed]
+core attr 2.6.0-1 [installed]
+core audispd-plugins 4.2.1-1
+core audispd-plugins-zos 4.2.1-1
+core audit 4.2.1-1 [installed]
+core autoconf 2.73-1 [installed]
+core automake 1.18.1-1 [installed]
+core b43-fwcutter 020-1
+core base 3-3 [installed]
+core base-devel 1-2 [installed]
+core bash 5.3.15-1 [installed]
+core binutils 2.47-1 [installed]
+core bison 3.8.2-8 [installed]
+core brotli 1.2.0-1 [installed]
+core brotli-testdata 1.2.0-1
+core btrfs-progs 7.1-1 [installed]
+core bzip2 1.0.8-6 [installed]
+core ca-certificates 20240618-1 [installed]
+core ca-certificates-mozilla 3.126-1 [installed]
+core ca-certificates-utils 20240618-1 [installed]
+core coreutils 9.11-2 [installed]
+core cracklib 2.10.3-1
+core cryptsetup 2.8.7-1 [installed]
+core curl 8.21.0-1 [installed]
+core dash 0.5.13.4-1
+core db 6.2.32-4
+core db5.3 5.3.28-7 [installed]
+core dbus 1.16.2-1 [installed]
+core dbus-broker 37-3 [installed]
+core dbus-broker-units 37-3 [installed]
+core dbus-daemon-units 1.16.2-1
+core dbus-docs 1.16.2-1
+core dbus-units 37-3 [installed]
+core debugedit 5.3-1 [installed]
+core debuginfod 0.195-1 [installed]
+core device-mapper 2.03.41-1 [installed]
+core diffutils 3.12-2 [installed]
+core ding-libs 0.7.0-1
+core dmraid 1.0.0.rc16.3-15
+core dnssec-anchors 20250524-1
+core dosfstools 4.2-5 [installed]
+core e2fsprogs 1.47.4-1 [installed]
+core efibootmgr 18-4 [installed]
+core efivar 39-2 [installed]
+core elfutils 0.195-1 [installed]
+core expat 2.8.2-1 [installed]
+core fakeroot 1:1.37.2-3 [installed]
+core file 5.48-1 [installed]
+core filesystem 2025.10.12-1 [installed]
+core findutils 4.11.0-1 [installed]
+core flex 2.6.4-6 [installed]
+core fuse2fs 1.47.4-1
+core gawk 5.4.1-1 [installed]
+core gc 8.2.12-1 [installed]
+core gcc 16.1.1+r595+g171d15ac6959-1 [installed]
+core gcc-ada 16.1.1+r595+g171d15ac6959-1
+core gcc-d 16.1.1+r595+g171d15ac6959-1
+core gcc-fortran 16.1.1+r595+g171d15ac6959-1
+core gcc-gcobol 16.1.1+r595+g171d15ac6959-1
+core gcc-go 16.1.1+r595+g171d15ac6959-1
+core gcc-libs 16.1.1+r595+g171d15ac6959-1 [installed]
+core gcc-m2 16.1.1+r595+g171d15ac6959-1
+core gcc-objc 16.1.1+r595+g171d15ac6959-1
+core gcc-rust 16.1.1+r595+g171d15ac6959-1
+core gdbm 1.26-2 [installed]
+core gettext 1.0-2 [installed]
+core glib2 2.88.3-1 [installed]
+core glib2-devel 2.88.3-1 [installed]
+core glib2-docs 2.88.3-1
+core glibc 2.44+r5+g7cba77790f32-1 [installed]
+core glibc-locales 2.44+r5+g7cba77790f32-1
+core gmp 6.3.0-3 [installed]
+core gnulib-l10n 20241231-1 [installed]
+core gnupg 2.4.9-2 [installed]
+core gnutls 3.8.13-2 [installed]
+core gpgme 2.1.2-1 [installed]
+core gpm 1.20.7.r38.ge82d1a6-6 [installed]
+core grep 3.12-2 [installed]
+core groff 1.24.1-1 [installed]
+core grub 2:2.14-1 [installed]
+core gssproxy 0.9.2-3
+core guile 3.0.11-1 [installed]
+core gzip 1.14-2 [installed]
+core hdparm 9.65-3 [installed]
+core hwdata 0.410-1 [installed]
+core iana-etc 20260530-1 [installed]
+core icu 78.3-1 [installed]
+core inetutils 2.8-1
+core iproute2 7.1.0-1 [installed]
+core iptables 1:1.8.13-1 [installed]
+core iptables-legacy 1:1.8.13-1
+core iputils 20250605-1 [installed]
+core iw 6.17-1
+core jansson 2.15.0-1 [installed]
+core jfsutils 1.1.15-9
+core json-c 0.19-1 [installed]
+core kbd 2.10.0-1 [installed]
+core keyutils 1.6.3-4 [installed]
+core kmod 34.2-1 [installed]
+core krb5 1.22.2-1 [installed]
+core ldns 1.9.2-1
+core leancrypto 1.8.0-1 [installed]
+core lemon 3.53.4-1
+core less 1:704-1 [installed]
+core lib32-gcc-libs 16.1.1+r595+g171d15ac6959-1 [installed]
+core lib32-glibc 2.44+r5+g7cba77790f32-1 [installed]
+core lib32-libltdl 2.6.2-3
+core libaio 0.3.113-4 [installed]
+core libarchive 3.8.9-1 [installed]
+core libasan 16.1.1+r595+g171d15ac6959-1 [installed]
+core libassuan 3.0.0-1 [installed]
+core libatomic 16.1.1+r595+g171d15ac6959-1 [installed]
+core libbpf 1.7.0-1 [installed]
+core libcap 2.78-1 [installed]
+core libcap-ng 0.9.3-1 [installed]
+core libcurl-compat 8.21.0-1
+core libcurl-gnutls 8.21.0-1 [installed]
+core libedit 20260512_3.1-1 [installed]
+core libelf 0.195-1 [installed]
+core libevent 2.1.13-2 [installed]
+core libevent-docs 2.1.13-2
+core libffi 3.7.1-1 [installed]
+core libgcc 16.1.1+r595+g171d15ac6959-1 [installed]
+core libgccjit 16.1.1+r595+g171d15ac6959-1
+core libgcobol 16.1.1+r595+g171d15ac6959-1
+core libgcrypt 1.12.2-1 [installed]
+core libgfortran 16.1.1+r595+g171d15ac6959-1 [installed]
+core libgm2 16.1.1+r595+g171d15ac6959-1
+core libgo 16.1.1+r595+g171d15ac6959-1
+core libgomp 16.1.1+r595+g171d15ac6959-1 [installed]
+core libgpg-error 1.61-1 [installed]
+core libgphobos 16.1.1+r595+g171d15ac6959-1
+core libhwasan 16.1.1+r595+g171d15ac6959-1 [installed]
+core libidn2 2.3.8-1 [installed]
+core libinih 62-2 [installed]
+core libisl 0.28-1 [installed]
+core libitm 16.1.1+r595+g171d15ac6959-1
+core libksba 1.8.0-1 [installed]
+core libldap 2.6.13-1 [installed]
+core liblsan 16.1.1+r595+g171d15ac6959-1 [installed]
+core libmakepkg-dropins 20-1 [installed]
+core libmicrohttpd 1.0.9-1 [installed]
+core libmnl 1.0.5-2 [installed]
+core libmpc 1.4.1-1 [installed]
+core libnetfilter_conntrack 1.1.1-1 [installed]
+core libnfnetlink 1.0.2-2 [installed]
+core libnftnl 1.3.1-1 [installed]
+core libnghttp2 1.70.0-1 [installed]
+core libnghttp3 1.18.0-1 [installed]
+core libngtcp2 1.25.0-1 [installed]
+core libnl 3.12.0-1 [installed]
+core libnsl 2.0.1-2 [installed]
+core libobjc 16.1.1+r595+g171d15ac6959-1 [installed]
+core libp11-kit 0.26.4-1 [installed]
+core libpcap 1.10.6-1 [installed]
+core libpipeline 1.5.8-1 [installed]
+core libpsl 0.21.5-2 [installed]
+core libquadmath 16.1.1+r595+g171d15ac6959-1 [installed]
+core libsasl 2.1.28-5 [installed]
+core libseccomp 2.6.0-1 [installed]
+core libsecret 0.21.7-1 [installed]
+core libsecret-docs 0.21.7-1
+core libssh2 1.11.1-7 [installed]
+core libstdc++ 16.1.1+r595+g171d15ac6959-1 [installed]
+core libtasn1 4.21.0-1 [installed]
+core libtirpc 1.3.7-1 [installed]
+core libtool 2.6.2-3 [installed]
+core libtsan 16.1.1+r595+g171d15ac6959-1 [installed]
+core libubsan 16.1.1+r595+g171d15ac6959-1 [installed]
+core libunistring 1.4.2-1 [installed]
+core libusb 1.0.30-1 [installed]
+core libverto 0.3.2-6 [installed]
+core libxcrypt 4.5.2-1 [installed]
+core libxcrypt-compat 4.5.2-1 [installed]
+core libxml2 2.15.3-1 [installed]
+core libxml2-docs 2.15.3-1
+core licenses 20240728-1 [installed]
+core links 2.30-2
+core linux 7.1.5.arch1-2 [installed]
+core linux-api-headers 7.1-1 [installed]
+core linux-docs 7.1.5.arch1-2
+core linux-firmware 20260622-1 [installed]
+core linux-firmware-amdgpu 20260622-1 [installed]
+core linux-firmware-atheros 20260622-1 [installed]
+core linux-firmware-broadcom 20260622-1 [installed]
+core linux-firmware-cirrus 20260622-1 [installed]
+core linux-firmware-intel 20260622-1 [installed]
+core linux-firmware-liquidio 20260622-1
+core linux-firmware-marvell 20260622-1
+core linux-firmware-mediatek 20260622-1 [installed]
+core linux-firmware-mellanox 20260622-1
+core linux-firmware-nfp 20260622-1
+core linux-firmware-nvidia 20260622-1 [installed]
+core linux-firmware-other 20260622-1 [installed]
+core linux-firmware-qcom 20260622-1
+core linux-firmware-qlogic 20260622-1 [installed]
+core linux-firmware-radeon 20260622-1 [installed]
+core linux-firmware-realtek 20260622-1 [installed]
+core linux-firmware-whence 20260622-1 [installed]
+core linux-headers 7.1.5.arch1-2
+core linux-lts 6.18.41-1
+core linux-lts-docs 6.18.41-1
+core linux-lts-headers 6.18.41-1
+core logrotate 3.22.0-1
+core lto-dump 16.1.1+r595+g171d15ac6959-1
+core lvm2 2.03.41-1
+core lz4 1:1.10.0-2 [installed]
+core lzo 2.10-5 [installed]
+core m4 1.4.21-2 [installed]
+core make 4.4.1-3 [installed]
+core man-db 2.13.1-2 [installed]
+core man-pages 6.18-1 [installed]
+core man-pages-utils 6.18-1
+core mdadm 4.6-2 [installed]
+core minizip 1:1.3.2-3 [installed]
+core mkinitcpio 41-4 [installed]
+core mkinitcpio-busybox 1.36.1-1 [installed]
+core mkinitcpio-nfs-utils 0.3-8
+core mpdecimal 4.0.1-3 [installed]
+core mpfr 4.2.2-1 [installed]
+core nano 9.1-1
+core ncurses 6.6-2 [installed]
+core net-tools 2.10-3
+core nettle 4.0-1 [installed]
+core nfs-utils 2.9.2-1
+core nfsidmap 2.9.2-1
+core nilfs-utils 2.3.0-1
+core npth 1.8-1 [installed]
+core nspr 4.39-1 [installed]
+core nss 3.126-1 [installed]
+core openldap 2.6.13-1
+core openssh 10.4p1-3 [installed]
+core openssl 3.6.3-1 [installed]
+core p11-kit 0.26.4-1 [installed]
+core p11-kit-docs 0.26.4-1
+core pacman 7.1.0.r9.g54d9411-2 [installed]
+core pacman-mirrorlist 20260610-1 [installed]
+core pam 1.7.2-2 [installed]
+core pambase 20260616-1 [installed]
+core patch 2.8-1 [installed]
+core pciutils 3.15.0-1 [installed]
+core pcre 8.45-4 [installed]
+core pcre2 10.47-1 [installed]
+core perl 5.42.2-1 [installed]
+core pinentry 1.3.3-1 [installed]
+core pkgconf 3.0.5-1 [installed]
+core popt 1.19-2 [installed]
+core ppp 2.5.3-1
+core pptpclient 1.10.0-3
+core procps-ng 4.0.6-3 [installed]
+core psmisc 23.7-2 [installed]
+core python 3.14.6-1 [installed]
+core python-audit 4.2.1-1
+core python-brotli 1.2.0-1
+core python-capng 0.9.3-1
+core python-libseccomp 2.6.0-1
+core python-tests 3.14.6-1
+core readline 8.3.003-1 [installed]
+core rpcbind 1.2.9-1 [installed]
+core s-nail 14.9.25-1
+core sdparm 1.12-1
+core sed 4.10-1 [installed]
+core shadow 4.20.0.arch1-1 [installed]
+core sqlite 3.53.4-1 [installed]
+core sqlite-analyzer 3.53.4-1
+core sqlite-doc 3.53.4-1
+core sqlite-tcl 3.53.4-1
+core sudo 1.9.17.p2-6 [installed]
+core syslinux 6.04.pre3.r3.g05ac953c-5
+core systemd 261.2-1 [installed]
+core systemd-libs 261.2-1 [installed]
+core systemd-resolvconf 261.2-1
+core systemd-sysvcompat 261.2-1 [installed]
+core systemd-tests 261.2-1
+core systemd-ukify 261.2-1
+core tar 1.35-2 [installed]
+core texinfo 7.3-1 [installed]
+core thin-provisioning-tools 1.3.3-1
+core tpm2-tss 4.1.3-1 [installed]
+core tzdata 2026c-1 [installed]
+core unixodbc 2.3.14-1
+core usbutils 019-1 [installed]
+core util-linux 2.42.2-1 [installed]
+core util-linux-libs 2.42.2-1 [installed]
+core voa-verifiers-arch 20260727-1
+core which 2.25-1 [installed]
+core wireless-regdb 2026.05.30-1
+core wpa_supplicant 2:2.11-5 [installed]
+core xfsprogs 7.1.1-1
+core xlinks 2.30-2
+core xz 5.8.3-1 [installed]
+core zlib 1:1.3.2-3 [installed]
+core zlib-static 1:1.3.2-3
+core zstd 1.5.7-3 [installed]

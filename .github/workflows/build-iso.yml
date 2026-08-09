@@ -41,7 +41,7 @@ jobs:
       - name: Setup Pacman Cache
         uses: actions/cache@v4
         with:
-          path: /tmp/pacman_cache
+          path: /var/cache/pacman/pkg
           key: pacman-cache-${{ github.run_id }}
           restore-keys: |
             pacman-cache-
@@ -64,7 +64,7 @@ jobs:
 
           # Run the build.
           # -w is the temporary working dir, -c is the cache dir, -o is the output dir
-          mkarchiso -v -w /tmp/work -c /tmp/pacman_cache -o ./out ./archiso-profile
+          mkarchiso -v -w /tmp/work -o ./out ./archiso-profile
 
       # 4) Extract version and generate checksum
       - name: Generate Checksum and Meta-data

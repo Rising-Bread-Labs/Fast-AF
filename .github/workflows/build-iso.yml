@@ -1,0 +1,106 @@
+name: Build Fast-AF ISO
+
+# Triggers
+on:
+  workflow_dispatch: # Allows running manually from the Actions tab
+  push:
+    branches:
+      - main
+    paths:
+      - 'archiso-profile/**' # Runs on pushes that modify the archiso-profile dir in repo
+      - 'dotfiles/**' # Runs on pushes that modify the dotfiles dir in repo
+  schedule:
+    - cron: '0 0 1 * *' # Runs at 00:00 on the 1st of every month
+
+# Permissions (Required to publish releases and delete old ones)
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    # Run the entire job inside an Arch Linux Docker container
+    container:
+      image: archlinux:latest
+      # --privileged is required because mkarchiso uses loop devices and mount commands
+      options: --privileged
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Initialize Pacman & Install archiso
+        run: |
+          # The base docker image requires keyring initialization before installing packages
+          pacman-key --init
+          pacman-key --populate
+          pacman -Syu --noconfirm archiso
+
+      # 1) Handle pacman cache
+      - name: Setup Pacman Cache
+        uses: actions/cache@v4
+        with:
+          path: /tmp/pacman_cache
+          key: pacman-cache-${{ github.run_id }}
+          restore-keys: |
+            pacman-cache-
+
+      # 2) Sync dotfiles to airootfs 'payload' destination
+      - name: Inject Dotfiles
+        run: |
+          # Create the directory inside airootfs since it isn't tracked in Git
+          mkdir -p ./archiso-profile/airootfs/usr/local/share/fast-af-dotfiles
+
+          # Copy the dotfiles into the directory
+          # Using '/.' ensures hidden files/folders (like .config) are copied correctly, apparently, according to a reddit post
+          cp -r ./dotfiles/. ./archiso-profile/airootfs/usr/local/share/fast-af-dotfiles/
+
+      # 3) Build the ISO
+      - name: Run mkarchiso
+        run: |
+          # Ensure cache directory exists even on first run
+          mkdir -p /tmp/pacman_cache
+
+          # Run the build.
+          # -w is the temporary working dir, -c is the cache dir, -o is the output dir
+          mkarchiso -v -w /tmp/work -c /tmp/pacman_cache -o ./out ./archiso-profile
+
+      # 4) Extract version and generate checksum
+      - name: Generate Checksum and Meta-data
+        id: iso_meta
+        run: |
+          cd ./out
+          # Find the exact name of the generated ISO
+          ISO_FILENAME=$(ls *.iso | head -n 1)
+
+          # Generate SHA256 Checksum
+          sha256sum $ISO_FILENAME > ${ISO_FILENAME}.sha256
+
+          # Strip the .iso extension to use as the GitHub Release Title/Tag
+          RELEASE_TITLE="${ISO_FILENAME%.iso}"
+
+          # Pass these variables to the next step
+          echo "release_title=$RELEASE_TITLE" >> $GITHUB_OUTPUT
+
+      # 5) Publish the release
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.iso_meta.outputs.release_title }}
+          name: ${{ steps.iso_meta.outputs.release_title }}
+          body: "Automated build for Fast Arch Flex - Built on Arch, BTW"
+          files: |
+            out/*.iso
+            out/*.sha256
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 6) Prune old releases
+      - name: Prune Old Releases
+        uses: dev-drprasad/delete-older-releases@v0.3.3
+        with:
+          keep_latest: 5
+          delete_tags: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

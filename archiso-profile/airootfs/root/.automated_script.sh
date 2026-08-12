@@ -1,40 +1,19 @@
 #!/usr/bin/env bash
 
-script_cmdline() {
-    local param
-    for param in $(</proc/cmdline); do
-        case "${param}" in
-            script=*)
-                echo "${param#*=}"
-                return 0
-                ;;
-        esac
-    done
-}
-
 automated_script() {
-    local script rt
-    script="$(script_cmdline)"
-    if [[ -n "${script}" && ! -x /tmp/startup_script ]]; then
-        if [[ "${script}" =~ ^((http|https|ftp|tftp)://) ]]; then
-            printf '%s: downloading %s\n' "$0" "${script}"
-            # there's no synchronization for network availability before executing this script; to ensure the network
-            # is online, we use a transient systemd service that depends on network-online.target to download the
-            # script rather than manually polling the target
-            systemd-run --pty --quiet -p Wants=network-online.target -p After=network-online.target \
-                curl "${script}" --location --retry-connrefused --retry 10 --fail -s -o /tmp/startup_script
-            rt=$?
-        else
-            cp "${script}" /tmp/startup_script
-            rt=$?
-        fi
-        if [[ ${rt} -eq 0 ]]; then
-            chmod +x /tmp/startup_script
-            printf '%s: executing automated script\n' "$0"
-            # note that script is executed when other services (like pacman-init) may be still in progress, please
-            # synchronize to "systemctl is-system-running --wait" when your script depends on other services
-            /tmp/startup_script
-        fi
+    # Ensure system services (like pacman-init or network) are ready
+    systemctl is-system-running --wait &>/dev/null
+
+    local tui_path="/usr/local/bin/fastaf-installer-tui"
+
+    if [[ -x "$tui_path" ]]; then
+        printf '%s: launching Fast-AF installer TUI\n' "$0"
+
+        # Use 'exec' so that when the installer exits (or if they drop to a shell),
+        # it doesn't loop weirdly on tty1
+        exec "$tui_path"
+    else
+        echo "Error: Fast-AF TUI not found at $tui_path"
     fi
 }
 

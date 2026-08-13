@@ -2,6 +2,7 @@ alsa-utils
 amd-ucode
 arch-install-scripts
 base
+bash-completion
 bolt
 btrfs-progs
 cryptsetup

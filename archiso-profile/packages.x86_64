@@ -13,7 +13,6 @@ efibootmgr
 espeakup
 foot-terminfo
 gptfdisk
-grml-zsh-config
 hdparm
 intel-ucode
 networkmanager
@@ -28,8 +27,8 @@ mkinitcpio
 mkinitcpio-archiso
 mtools
 nvme-cli
+opendoas
 openpgp-card-tools
-openssh
 pcsclite
 pv
 reflector
@@ -43,9 +42,7 @@ tmux
 tpm2-tools
 tpm2-tss
 usbutils
-vim
+nvim
 wireless-regdb
 wireless_tools
 wpa_supplicant
-xdg-utils
-zsh
